@@ -65,7 +65,7 @@ class Opencv < Formula
     ENV.cxx11 if build.cxx11?
     jpeg = Formula["jpeg"]
     dylib = OS.mac? ? "dylib" : "so"
-
+    -DBUILD_OPENEXR=OFF
     args = std_cmake_args + %W[
       -DCMAKE_OSX_DEPLOYMENT_TARGET=
       -DBUILD_ZLIB=OFF
