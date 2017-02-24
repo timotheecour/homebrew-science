@@ -71,7 +71,7 @@ class Opencv < Formula
       -DBUILD_ZLIB=OFF
       -DBUILD_TIFF=OFF
       -DBUILD_PNG=OFF
-      -DBUILD_OPENEXR=OFF
+      -DBUILD_OPENEXR=ON
       -DBUILD_JASPER=OFF
       -DBUILD_JPEG=OFF
       -DJPEG_INCLUDE_DIR=#{jpeg.opt_include}
