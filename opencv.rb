@@ -78,7 +78,7 @@ class Opencv < Formula
     ]
 
     # https://github.com/Homebrew/homebrew-science/pull/5185
-    args << "-DBUILD_OPENEXR=" + (if OS.linux? then "ON" else "OFF" end)
+    args << "-DBUILD_OPENEXR=" + (OS.linux? ? "ON" : "OFF")
 
     args << "-DBUILD_TESTS=OFF" << "-DBUILD_PERF_TESTS=OFF" if build.without? "test"
     args << "-DBUILD_opencv_python=" + arg_switch("python")
